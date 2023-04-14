@@ -24,7 +24,7 @@ public class Array2 {
 		System.out.println(Arrays.toString(data[1]));
 		
 		// 복합적 Object 배열
-		Object[] userinfo = {"hong",23,"서울","01023457789",5000};
+		//Object[] userinfo = {"hong",23,"서울","01023457789",5000};
 	}
 
 }
