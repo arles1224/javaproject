@@ -11,15 +11,15 @@ public class Net5 {
 	public static void main(String[] args) {
 		// 서버 생성
 		System.out.println("Server Connect");
-		int port = 8080; // 포트 번호
+		int port = 9002; // 포트 번호
 		try {
 			ServerSocket ss = new ServerSocket(port); // 포트를 오픈 시킴
 			while(true) {
-				System.out.println("연결 대기중");
+				System.out.println("Wait Connecting...");
 				Socket sc = ss.accept(); // accept : 클라이언트가 들어오는 것을 대기하는 역할
 				
 				// 클라이언트가 접속 했을 경우 밑의 라인부터 시작. 접속 완료.
-				System.out.println("호스트 : 통신 연결 성공");
+				System.out.println("Host : Connect Success");
 				
 				// getInputStream : 서버가 클라이언트에게서 받는 통로
 				InputStream is = sc.getInputStream();
@@ -33,13 +33,13 @@ public class Net5 {
 				System.out.println(msgclient); // 출력
 				
 				// 클라이언트로 메세지 전송
-				String aws = "반갑습니다."; // 서버에서 보낼 메세지 작성
+				String aws = "Greetings"; // 서버에서 보낼 메세지 작성
 				os.write(aws.getBytes()); // 클라이언트로 보내기 위한 메모리 저장
 				os.flush();
 				os.close();
 				is.close();
-				ss.close();
-				sc.close();
+				//ss.close();
+				//sc.close();
 			}
 		}catch(Exception e) {
 			System.out.println("Server Connect Error");

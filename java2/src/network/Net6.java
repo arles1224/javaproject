@@ -9,13 +9,13 @@ public class Net6 {
 	public static void main(String[] args) {
 		// 클라이언트 생성
 		try {
-			System.out.println("Client 접속");
-			String ip = "192.168.10.148";
-			int port = 8080;
+			System.out.println("Client Connected");
+			String ip = "192.168.10.157";
+			int port = 9007;
 			Socket sc = new Socket(ip,port);
 			
 			// 클라이언트에서 서버로 보낼 데이터
-			String cmsg = "안녕하세요.";
+			String cmsg = "Hello World!";
 			// 클라이언트에서 서버로 보내는 통로
 			OutputStream os = sc.getOutputStream();
 			os.write(cmsg.getBytes()); // byte로 전송
@@ -31,7 +31,7 @@ public class Net6 {
 			is.close();
 			os.close();
 		}catch(Exception e) {
-			System.out.println("서버 접근 실패");
+			System.out.println("Server Connect Error");
 		}
 	}
 
