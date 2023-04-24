@@ -14,10 +14,8 @@ public class Net1 {
 			// getByName : 접속할 도메인 주소를 입력하는 메소드.
 			// getHostAddress : 접속하는 서비스의 IP 주소를 가져오는 메소드.
 			// getAllByName : 배열이다.
-			String domain = ia.getHostAddress();
 			String ip = ia.getHostAddress();
 			System.out.println(ia);
-			System.out.println(domain);
 			System.out.println(ip);
 			
 			InetAddress[] ia2 = InetAddress.getAllByName("naver.com");

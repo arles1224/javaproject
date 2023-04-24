@@ -38,8 +38,8 @@ public class Net5 {
 				os.flush();
 				os.close();
 				is.close();
-				//ss.close();
-				//sc.close();
+				ss.close();
+				sc.close();
 			}
 		}catch(Exception e) {
 			System.out.println("Server Connect Error");
